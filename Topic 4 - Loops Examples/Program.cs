@@ -6,16 +6,20 @@ namespace Topic_4_Loops_Examples
     {
         static void Main(string[] args)
         {
-            int num = 3;
+            int i = 1;
 
-            while (num >= 0) 
+            while (i <= 12)
             {
-                Console.WriteLine($"Number is {num}");
-                // Post-fix decrement
-                --num;
+                int j = 1;
+                while (j <= 12)
+                {
+                    Console.WriteLine($"{i} times {j} is: {i * j}");
+                    j++;
+                }
+                i++;
             }
 
-            Console.WriteLine("End");
+            Console.WriteLine("END");
 
         }
     }
