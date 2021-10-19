@@ -6,21 +6,32 @@ namespace Topic_4_Loops_Examples
     {
         static void Main(string[] args)
         {
-            int i = 1;
 
-            while (i <= 12)
+            int input = 1;
+            int large = 0;
+
+            while (input != 0)
             {
-                int j = 1;
-                while (j <= 12)
+                input = Convert.ToInt32(Console.ReadLine());
+                if (input % 2 == 0)
                 {
-                    Console.WriteLine($"{i} times {j} is: {i * j}");
-                    j++;
+                    Console.WriteLine("Positive Integer");
+                    
+                    if (input > large)
+                    {
+                        large = input;
+                        Console.WriteLine("OK");
+                    } else
+                    {
+                        Console.WriteLine("OK");
+                    }
                 }
-                i++;
+                else
+                {
+                    Console.WriteLine("Negative Integer");
+                }
             }
-
-            Console.WriteLine("END");
-
+            Console.WriteLine($"\nZero has been entered\nLargest Number submitted was: {large}");
         }
     }
 }
